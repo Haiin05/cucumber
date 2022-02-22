@@ -1,13 +1,11 @@
-import { useState } from "react";
+import { useState } from "react"
+import { cls } from "../libs/utils"
 
-function cls(...classNames: string[]) {
-	return classNames.join(' ')
-}
 
 export default function Enter() {
-	const [method, setMethod] = useState<"email" | "phone">("email");
-	const onEmailClick = () => setMethod("email");
-	const onPhoneClick = () => setMethod("phone");
+	const [method, setMethod] = useState<"email" | "phone">("email")
+	const onEmailClick = () => setMethod("email")
+	const onPhoneClick = () => setMethod("phone")
 	return (
 		<div className='p-4'>
 			<h3 className='text-3xl font-bold text-center mt-16'>Enter to Carrot</h3>
@@ -74,5 +72,5 @@ export default function Enter() {
 				</div>
 			</div>
 		</div>
-	);
+	)
 }
